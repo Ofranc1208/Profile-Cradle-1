@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfileCradle.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="signup.html">ProfileCradle.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="benefits.html">Why "YOU" Matters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ProfileCatalog.html">Profile Categories</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h2 class="text-center fw-bold mb-4">Sign Up</h2>
+        <p class="text-center">Create an account to start building your professional profile.</p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg p-4">
+                    <h4 class="text-center mb-4">Sign Up with Social Media</h4>
+                    <div class="d-grid gap-2">
+                        <a href="#" class="btn btn-primary" onclick="facebookSignUp()">
+                            <i class="fab fa-facebook-f me-2"></i> Sign Up with Facebook
+                        </a>
+                        <a href="createprofile.html" class="btn btn-info text-white" onclick="twitterSignUp()">
+                            <i class="fab fa-x-twitter me-2"></i> Sign Up with X
+                        </a>
+                        <a href="#" class="btn btn-danger" onclick="googleSignUp()">
+                            <i class="fab fa-google me-2"></i> Sign Up with Google
+                        </a>
+                    </div>
+                    <div class="text-center my-3">
+                        <span class="fw-bold">OR</span>
+                    </div>
+                    <form action="/action_page.php" method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label fw-bold">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-bold">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 fw-bold">Sign Up</button>
+                        <div class="text-center mt-3">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-5 bg-dark text-light">
+        <p class="mb-0">&copy; 2023 ProfileNest.com | Create and showcase your professional story.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="signup.js"></script> 
+</body>
+</html>
