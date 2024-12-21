@@ -33,7 +33,9 @@ h3.text-center.mb-4 {
   margin-bottom: 24px;
   letter-spacing: 0.5px;
 }
-
+h2.fw-bold { 
+  margin-bottom: 30px; /* Adjust the pixel value as needed */
+}
 .hero-section .btn-lg {
   background-color: #1560eb;
   border: none;
@@ -89,55 +91,46 @@ h3.text-center.mb-4 {
   object-fit: cover; /* Crop image to fit the area without distortion */
 }
 
-.section-2,
-.section-3,
 .section-4 {
+  padding: 24px; 
   background-color: #fff;
   color: #333;
-  padding: 64px 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   text-align: left;
+  margin-top: 28px; 
 }
 
-.section-2 h1,
-.section-3 h1,
-.section-4 h1 {
-  font-size: 36px;
-  margin-bottom: 24px;
-  color: #333;
-  padding-left: 16px;
+.section-4 h1 {  
+  margin-bottom: 20px; 
 }
 
-.section-2 p,
-.section-3 p,
-.section-4 p {
-  font-size: 18px;
-  margin-bottom: 24px;
-  color: #333;
-  padding-left: 16px;
+/* Ensure images are responsive */
+.section-4 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.section-2 {
-  margin-top: 40px;
+/* Add spacing between sections on larger screens */
+@media (min-width: 992px) {
+  .row > .col-md-6 {
+    margin-bottom: 30px;
+  }
 }
 
-.section-3 {
-  margin-top: 40px;
-}
-
-/* Media Query for Smaller Screens */
+/* Optional: Adjust text alignment for smaller screens */
 @media (max-width: 768px) {
-  .section-2 h1,
-  .section-3 h1,
-  .section-4 h1 {
-    font-size: 28px;
+  .section-4 {
+    text-align: center;
   }
 
-  .section-2 p,
-  .section-3 p,
-  .section-4 p {
-    font-size: 16px;
+  .section-4 img {
+    margin-bottom: 20px;
   }
 }
+
 
 
 /* Benefits Page Styles */
