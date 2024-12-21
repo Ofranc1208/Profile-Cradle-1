@@ -1,10 +1,10 @@
 /* Image Settings */
 img {
-  pointer-events: none; /* Prevent image zooming on click */
-  -webkit-user-select: none; /* Prevent text selection in Chrome/Safari */
-  -moz-user-select: none; /* Prevent text selection in Firefox */
-  -ms-user-select: none; /* Prevent text selection in IE/Edge */
-  user-select: none; /* Prevent text selection in other browsers */
+  pointer-events: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
 }
 
 /* Hero Section */
@@ -16,9 +16,10 @@ img {
 }
 
 .hero-section h1 {
-  font-size: 48px;
+  font-size: 38px;
   margin-bottom: 24px;
   font-weight: 700;
+  text-align: left;
 }
 
 .hero-section p {
@@ -33,9 +34,11 @@ h3.text-center.mb-4 {
   margin-bottom: 24px;
   letter-spacing: 0.5px;
 }
+
 h2.fw-bold { 
-  margin-bottom: 30px; /* Adjust the pixel value as needed */
+  margin-bottom: 30px; 
 }
+
 .hero-section .btn-lg {
   background-color: #1560eb;
   border: none;
@@ -53,15 +56,17 @@ h2.fw-bold {
   background-color: #003d80;
   transform: translateY(-3px);
 }
+
 /* Carousel Section */
 .carousel-section {
-  margin-top: 48px;
+  margin-top: 10px;  /* Reduced top margin */
+  margin-bottom: 10px; /* Reduced bottom margin */
 }
 
 .carousel-item .card {
   width: 90%;
   max-width: 500px;
-  margin: 32px auto;
+  margin: 32px auto; 
   background-color: #f8f9fa;
   border: none;
   border-radius: 8px;
@@ -69,6 +74,21 @@ h2.fw-bold {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+.carousel-control-prev, 
+.carousel-control-next {
+  width: 5%; /* Adjust as needed */
+}
+
+/* ... other CSS rules ... */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Or any color you prefer */
+  border-radius: 50%;
+  width: 30px;  /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
+}
 .carousel-item .card-body {
   text-align: center;
 }
@@ -87,22 +107,25 @@ h2.fw-bold {
 
 .profile-img {
   width: auto;
-  height: auto; /* Fixed height for consistent alignment */
-  object-fit: cover; /* Crop image to fit the area without distortion */
+  height: auto; 
+  object-fit: cover; 
 }
 
 .section-4 {
-  padding: 24px; 
+  padding: 24px;
   background-color: #fff;
   color: #333;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: left;
-  margin-top: 28px; 
+  margin-top: -10px; /* Changed to pixels */
+  margin-bottom: 10px; /* Add consistent bottom margin */
 }
 
-.section-4 h1 {  
-  margin-bottom: 20px; 
+.section-4 h1 {
+  font-size: 24px; /* Adjust the size as needed */
+  margin-bottom: 10px;
+ 
 }
 
 /* Ensure images are responsive */
@@ -131,7 +154,47 @@ h2.fw-bold {
   }
 }
 
+/* Styles for the AI Advantage page */
+body {
+  font-family: sans-serif;
+  margin: 0; 
+}
 
+.container { 
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 { 
+  text-align: center;
+  margin-bottom: 30px; 
+  font-size: 36px; 
+}
+
+h2 { 
+  margin-top: 40px; 
+  font-size: 30px; 
+}
+
+ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+/* Optional: Add some visual interest */
+.py-5 {
+  background-color: #f8f9fa; 
+}
+
+a {
+  color: #007bff; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 /* Benefits Page Styles */
 .benefits-page .benefits-section {
@@ -142,10 +205,11 @@ h2.fw-bold {
 }
 
 .benefits-page .benefits-section h1 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 24px;
   color: #333;
   padding-left: 16px;
+  text-align: left;
 }
 
 .benefits-page .benefits-section p {
@@ -155,20 +219,12 @@ h2.fw-bold {
   padding-left: 16px;
 }
 
-.benefits-page .section-2 { /* Add margin-top to section 2 */
-  margin-top: 32px; 
+.benefits-page .section-4 { 
+  margin-top: 32px;  /* Changed to pixels */
 }
 
-.benefits-page .section-3 { /* Add margin-top to section 3 */
-  margin-top: 32px; 
-}
-
-.benefits-page .section-4 { /* Add margin-top to section 4 */
-  margin-top: 32px; 
-}
-
- /* Profile Catalog */
- .card {
+/* Profile Catalog */
+.card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
