@@ -3,18 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Categories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Profile Catalog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="16x16" href="Picture.png/logo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Picture.png/logo.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Picture.png/logo.png">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="signup.html">ProfileCradle.com</a>
+      <a class="navbar-brand fw-bold" href="index.html">ProfileCradle.com</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
         aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,25 +26,31 @@
       <div class="collapse navbar-collapse" id="navbarToggle">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a> 
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="benefits.html">Why Stand Out</a></li>
           <li class="nav-item">
-            <a class="nav-link active" href="ProfileCatalog.html" aria-current="page">Profile Categories</a> 
-          </li> 
-          <li class="nav-item"><a class="nav-link" href="signup.html">Free Profile</a></li> 
+            <a class="nav-link" href="whystandout.html">Why Stand Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="ProfileCatalog.html" aria-current="page">Profile Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Free Profile</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <section class="hero-section py-5 bg-light">
+  <section class="hero-section py-5 bg-light hero-move">
     <div class="container text-left">
       <h1 class="fw-bold mb-3">Showcase Your Professional Story</h1>
-      <p class="lead mb-4">
+      <p class="lead mb-4 hero-move">
         Aspiring professionals in healthcare, law, technology, and beyond: Build your professional profile,
         discover residencies, grants, and jobs, and connect with leading organizations in your field.
       </p>
+      <a href="signup.html" class="btn btn-primary btn-lg shadow">
+        <i class="fas fa-user-plus me-2"></i> Get Your Free Page
+      </a>
     </div>
   </section>
 
@@ -56,272 +66,224 @@
             role="tab" aria-controls="students" aria-selected="false">Students</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="freelancers-tab" data-bs-toggle="tab" data-bs-target="#freelancers" type="button"
-            role="tab" aria-controls="freelancers" aria-selected="false">Freelancers</button>
+          <button class="nav-link" id="freelancers-tab" data-bs-toggle="tab" data-bs-target="#freelancers"
+            type="button" role="tab" aria-controls="freelancers" aria-selected="false">Freelancers</button>
         </li>
       </ul>
       <div class="tab-content mt-4" id="profileTabsContent">
-        <!-- Professionals Content -->
         <div class="tab-pane fade show active" id="professionals" role="tabpanel" aria-labelledby="professionals-tab">
-             <section class="carousel-section">
-              <div class="container my-5">
-                <h3 class="text-center mb-4">Featured Professionals</h3>
-                <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner text-center">
-                    <!-- Medical Professionals -->
-                    <div class="carousel-item active">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Medical Professional">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Medical Professionals</a>
-                          </h5>
-                          <p class="card-text text-muted">Explore profiles of experienced medical professionals.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Engineering Professionals -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Engineering Professional">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Engineering Professionals</a>
-                          </h5>
-                          <p class="card-text text-muted">Connect with engineers from various disciplines.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Law Professionals -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Law Professional">
-                        <div class="card-body p-4">
-                          <p class="card-title text-primary">
-                            <a href="signup.html">Law Professionals</a>
-                          </p>
-                          <p class="card-text text-muted">Discover lawyers specializing in different areas of law.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- IT Professionals -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="IT Professional">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">IT Professionals</a>
-                          </h5>
-                          <p class="card-text text-muted">Find skilled IT professionals for your tech needs.</p>
-                        </div>
+          <section class="carousel-section">
+            <div class="container my-5">
+              <h3 class="text-center mb-4">
+                <a href="signup.html" >Professionals Theme</a>
+              </h3>
+              <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 1">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Carousel Controls -->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-            </section>
-     
-          </div>
-        
-
-        <!-- Students Content -->
-        <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="students-tab">
-            <section class="carousel-section">
-              <div class="container my-5">
-                <h3 class="text-center mb-4">Featured Students Profiles</h3>
-                <div id="studentCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner text-center">
-                    <!-- Medical Students -->
-                    <div class="carousel-item active">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Medical Student">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Medical Students</a>
-                          </h5>
-                          <p class="card-text text-muted">Connect with aspiring medical professionals.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Engineering Students -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Engineering Student">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Engineering Students</a>
-                          </h5>
-                          <p class="card-text text-muted">Connect with future engineers from various disciplines.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Law Students -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Law Student">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Law Students</a>
-                          </h5>
-                         </div>
-                      </div>
-                    </div>
-                    <!-- IT Students -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="IT Student">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">IT Students</a>
-                          </h5>
-                          <p class="card-text text-muted">Find talented IT students with a passion for technology.</p>
-                        </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 2">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Carousel Controls -->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-            </section>
-            <p class="mt-4 text-muted text-center">Explore profiles of ambitious students across different fields.</p>
-          </div>
-          
-        <!-- Freelancers Content -->
-        <div class="tab-pane fade" id="freelancers" role="tabpanel" aria-labelledby="freelancers-tab">
-            <section class="carousel-section">
-              <div class="container my-5">
-                <h3 class="text-center mb-4">Featured Freelancers Profiles </h3>
-                <div id="freelancerCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner text-center">
-                    <!-- Web Developers -->
-                    <div class="carousel-item active">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Web Developer">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Web Developers</a>
-                          </h5>
-                          <p class="card-text text-muted">Find skilled web developers for your next project.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Graphic Designers -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Graphic Designer">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Graphic Designers</a>
-                          </h5>
-                         
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Content Writers -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Content Writer">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="signup.html">Content Writers</a>
-                          </h5>
-                          <p class="card-text text-muted">Hire talented content writers to craft compelling content.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Marketing Consultants -->
-                    <div class="carousel-item">
-                      <div class="card mx-auto shadow-sm">
-                        <img src="Image-min.PNG" class="card-img-top rounded-top" alt="Marketing Consultant">
-                        <div class="card-body p-4">
-                          <h5 class="card-title text-primary">
-                            <a href="freelancers.html#marketing">Marketing Consultants</a>
-                          </h5>
-                          <p class="card-text text-muted">Connect with experienced marketing consultants to boost your business.</p>
-                        </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 3">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Carousel Controls -->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#freelancerCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#freelancerCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-            </section>
-            <p class="mt-4 text-muted text-center">Explore profiles of talented freelancers across various fields.</p>
-          </div>
-        </section>
-
-          <div class="container">
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <section class="section-4 py-3 bg-light">
-                  <a href="bethespotlight.html">
-                    <h1 class="fw-bold mb-3">Be Uniquely You</h1>
-                    <img src="Picture.png/Be Uniquely You.png" alt="Be Uniquely You" class="img-fluid mb-4">
-                  </a>
-                  <p class="card-text text-muted">
-                    <a href="bethespotlight.html"> See the Benefits: Click Here  </a> 
-                  </p>
-                </section>
-              </div>
-
-              <div class="col-md-6">
-                <section class="section-4 py-3 bg-light">
-                  <a href="bethespotlight.html">
-                    <h1 class="fw-bold mb-3">Control Your Narrative</h1>
-                    <img src="Picture.png/Control Your Narrative.png" alt="Control Your Narrative"
-                      class="img-fluid mb-4">
-                  </a>
-                  <p class="card-text text-muted">
-                    <a href="bethespotlight.html"> See the Benefits: Click Here  </a> 
-                  </p>
-                </section>
-              </div>
-            </div>
-          </div>
-        
-          <section class="hero-section py-5 bg-light">
-            <div class="container text-left">
-              <h1 class="fw-bold mb-3">Your Theme, Your Statement</h1>
-              <p class="lead mb-4">
-                Make a statement with your theme. A well-chosen theme can elevate your profile, enhance your credibility, and attract the right audience.  Choose a design that speaks volumes about your expertise and professionalism.</p>
-              <a href="signup.html" class="btn btn-primary btn-lg shadow">
-                <i class="fas fa-user-plus me-2"></i> Get Your Free Page
-              </a>
             </div>
           </section>
-        
-        
-          <footer class="text-center py-4 bg-dark text-light">
-            <p class="mb-0">Copyright 2023 ProfileCradle -  All Rights Reserved |  Privacy Policy | Terms of Service</p>
-          </footer>
-        
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="signup.js"></script>
+        </div>
+  
+        <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="students-tab">
+          <section class="carousel-section">
+            <div class="container my-5">
+              <h3 class="text-center mb-4">
+                <a href="signup.html" >Student Theme</a>
+              </h3>
+              <div id="studentCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 2">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 2">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 2">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </section>
+  
+        </div>
+  
+        <div class="tab-pane fade" id="freelancers" role="tabpanel" aria-labelledby="freelancers-tab">
+          <section class="carousel-section">
+            <div class="container my-5">
+              <h3 class="text-center mb-4">
+                <a href="signup.html" >Freelancer Theme</a>
+              </h3>
+              <div id="freelancerCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 3">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 3">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card shadow-sm"> <img src="Image-min.PNG" class="card-img-top profile-img"
+                        alt="Profile 3">
+                      <div class="card-body">
+                        <p class="card-text text-muted">
+                          <a href="signup.html" > Click & Find Your Perfect Theme </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#freelancerCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#freelancerCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </section>
+  
+        </div>
+      </div>
+  
+  </section>
+ 
+ <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <section class="section-4 py-3 bg-light">
+          <a href="bethespotlight.html">
+            <h1 class="fw-bold mb-3">Be Uniquely You</h1>
+            <img src="Picture.png/Be Uniquely You.png" alt="Be Uniquely You" class="img-fluid mb-4">
+          </a>
+          <p class="card-text text-muted">
+            <a href="bethespotlight.html"> See the Benefits: Click Here  </a> 
+          </p>
+        </section>
+      </div>
+      <div class="col-md-6">
+        <section class="section-4 py-3 bg-light">
+          <a href="bethespotlight.html">
+            <h1 class="fw-bold mb-3">Control Your Narrative</h1>
+            <img src="Picture.png/Control Your Narrative.png" alt="Unlock the Power of AI" class="img-fluid mb-4">
+          </a>
+          <p class="card-text text-muted">
+            <a href="bethespotlight.html"> See the Benefits: Click Here  </a> 
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <section class="hero-section py-5 bg-light hero-move">
+    <div class="container text-left">
+      <h1 class="fw-bold mb-3">Your Professional Journey Starts Here!</h1>
+      <p class="lead mb-4 hero-move">
+        Create a standout profile in minutes with ProfileCradle's AI-powered tools! Showcase your skills and experience, build a personal brand, and connect with employers. Find internships, grants, and jobs that match your goals. 
+      </p>
+      <a href="signup.html" class="btn btn-primary btn-lg shadow hero-move"> 
+        <i class="fas fa-user-plus me-2"></i> Get Your Free Page
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 bg-dark text-light">
+    <p class="mb-0">Copyright 2023 ProfileCradle - All Rights Reserved | Privacy Policy | Terms of Service</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="signup.js"></script>
 
 </body>
+
 </html>

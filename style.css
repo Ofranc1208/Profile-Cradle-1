@@ -1,9 +1,47 @@
 /* General Styling */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+}
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+/* Existing CSS */
+
+.navbar-nav .nav-link.active {
+  font-weight: bold; /* Make the active link bold */
+  color: #ffc107; /* Adjust color as desired */
+  border-bottom: 2px solid #ffc107; /* Add an underline */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to hero section headings */
+.hero-section .animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+}
+
+/* Style for wrapped elements (if needed) */
+.wrapped {
+  background-color: yellow;
+  /* Highlight wrapped elements */
+  /* Add other styles as needed */
 }
 
 /* Typography */
@@ -37,7 +75,8 @@ h3 {
   background-color: #e9ecef;
   color: #333;
   padding: 64px 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
 }
 
 .hero-section h1 {
@@ -52,18 +91,16 @@ h3 {
   margin-bottom: 32px;
 }
 
+/* Style for card headings */
 h3.text-center.mb-4 {
-  font-size: 23.4px;
+  font-size: 16px; /* Updated font size */
   font-weight: 700;
   color: #333;
   margin-bottom: 24px;
   letter-spacing: 0.5px;
 }
 
-h2.fw-bold {
-  margin-bottom: 30px;
-}
-
+/* Style for hero section buttons */
 .hero-section .btn-lg {
   background-color: #1560eb;
   border: none;
@@ -84,7 +121,7 @@ h2.fw-bold {
 
 /* Carousel Section */
 .carousel-section {
-  margin-top: -20px;
+  margin-top: -10px;
   /* Reduced top margin */
   margin-bottom: -50px;
   /* Reduced bottom margin */
@@ -118,20 +155,8 @@ h2.fw-bold {
   text-align: center;
 }
 
-.carousel-item .card-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.carousel-item .card-title a {
-  /* Target the link within the card title */
-  font-size: 20px;
-  /* Adjust the font size as needed */
-}
-
 .carousel-item .card-text {
-  font-size: 16px;
+  font-size: 15px; /* Updated font size */
   line-height: 1.5;
   color: #555;
 }
@@ -142,13 +167,14 @@ h2.fw-bold {
   object-fit: cover;
 }
 
+/* Section 4 Styles */
 .section-4 {
   padding: 24px;
   background-color: #fff;
   color: #333;
   border: 1px solid #ddd;
   border-radius: 5px;
-  text-align: left;
+  text-align: center; /* Updated text alignment */
   margin-top: -10px;
   /* Changed to pixels */
   margin-bottom: 10px;
@@ -156,7 +182,7 @@ h2.fw-bold {
 }
 
 .section-4 h1 {
-  font-size: 24px;
+  font-size: 15px; /* Updated font size */
   margin-bottom: 10px;
 }
 
@@ -168,259 +194,48 @@ h2.fw-bold {
   margin: 0 auto;
 }
 
-/* Add spacing between sections on larger screens */
-@media (min-width: 992px) {
-  .row>.col-md-6 {
-    margin-bottom: 30px;
-  }
-}
-
-/* Optional: Adjust text alignment for smaller screens */
+/* Media Query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
-  .section-4 {
-    text-align: center;
+  .hero-section h1 {
+      font-size: 30px;
+      /* Adjust font size for smaller screens */
   }
 
-  .section-4 img {
-    margin-bottom: 20px;
+  .hero-section p {
+      font-size: 16px;
+      /* Adjust font size for smaller screens */
+  }
+
+  .section-4 h1 {
+      font-size: 20px;
+      /* Adjust font size for smaller screens */
+  }
+
+  /* Add more styles here to adjust the layout for smaller screens */
+  /* For example, you might want to change the number of columns, 
+     adjust margins and padding, or stack elements vertically. */
+}
+
+/* Media Query for larger screens (e.g., desktop) */
+@media (min-width: 769px) {
+  /* Add styles here to adjust the layout for larger screens */
+  /* For example, you might want to increase font sizes, 
+     adjust column widths, or add more spacing between elements. */
+}
+
+/* Animation for hero section elements */
+.hero-section .container .hero-move {
+  /* More specific selector */
+  animation: gentleMove 1s ease-in-out forwards;
+  /* Added 'forwards' */
+}
+
+@keyframes gentleMove {
+  0% {
+      transform: translateY(0);
+  }
+
+  100% {
+      transform: translateY(-10px);
   }
 }
-
-/* Styles for the AI Advantage page */
-body {
-  font-family: sans-serif;
-  margin: 0;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 36px;
-}
-
-h2 {
-  margin-top: 40px;
-  font-size: 30px;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 40px;
-}
-
-/* Optional: Add some visual interest */
-.py-5 {
-  background-color: #f8f9fa;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Youtube video  */
-
-.embed-responsive {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin: 20px auto;
-}
-
-.embed-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* Benefits Page Styles */
-.benefits-page .benefits-section {
-  background-color: #fff;
-  color: #333;
-  padding: 64px 16px;
-  text-align: left;
-}
-
-.benefits-page .benefits-section h1 {
-  font-size: 30px;
-  margin-bottom: 24px;
-  color: #333;
-  padding-left: 16px;
-  text-align: left;
-}
-
-.benefits-page .benefits-section p {
-  font-size: 18px;
-  margin-bottom: 24px;
-  color: #333;
-  padding-left: 16px;
-}
-
-.benefits-page .section-4 { 
-  margin-top: 32px;  /* Changed to pixels */
-}
-
-/* Profile Catalog */
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.nav-tabs .nav-link {
-  color: #333;
-  font-weight: bold;
-  font-size: small;
-
-}
-
-.nav-tabs .nav-link.active {
-  color: #fff;
-  background-color: #007bff;
-}
-
- /* Create your profile */
-
-
-/* General styling for the chatbox */
-/* Chatbox Styles for Create Profile Page */
-.create-profile-page .chatbox-container {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.create-profile-page .chatbox-header {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.create-profile-page .chatbox-input .input-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.create-profile-page .chatbox-input textarea {
-  width: 100%;
-  height: 120px;
-  padding: 10px;
-  padding-right: 40px;
-  /* Space for microphone icon */
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.create-profile-page .microphone-icon {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #007bff;
-}
-
-.create-profile-page .microphone-icon:hover {
-  color: #0056b3;
-}
-
-.create-profile-page .chatbox-input button {
-  margin-top: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-}
-
-.create-profile-page .chatbox-input button:hover {
-  background-color: #0056b3;
-}
-
-.create-profile-page .chatbox-output {
-  margin-top: 20px;
-}
-
-.create-profile-page .chatbox-output-header {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.create-profile-page #outputDiv {
-  background-color: #f8f9fa;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  padding: 10px;
-  min-height: 100px;
-}
-
-  /* Progress bar  */
-  .progress-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #212529; /* Dark gray */
-    margin-bottom: 10px;
-  }
-  
-  .progress-outer {
-    background: #fff;
-    padding: 5px 40px 5px 5px; /* Reduced padding */
-    border: 2px solid #e0e0e0; /* Lighter gray */
-    border-radius: 25px; /* Softer corners */
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .progress {
-    background: #e0e0e0; /* Lighter gray */
-    border-radius: 15px; /* Softer corners */
-    height: 8px; /* Slightly thinner bar */
-    margin: 0;
-  }
-  
-  .progress .progress-bar {
-    background-color: #0d6efd; /* Bootstrap blue */
-    border-radius: 15px; /* Softer corners */
-    box-shadow: none;
-    animation: animate-positive 2s;
-  }
-  
-  .progress .progress-value {
-    font-size: 12px; 
-    font-weight: 400;
-    color: #6c757d; /* Bootstrap gray */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* Vertically center */
-    right: 10px;
-  }
-  
-  @keyframes animate-positive {
-    0% { width: 0; }
-  }
