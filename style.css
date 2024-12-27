@@ -1,3 +1,20 @@
+* {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Re-enable pointer events for navbar elements */
+.navbar, 
+.navbar-brand, 
+.navbar-toggler, 
+.navbar-nav, 
+.nav-link { 
+  pointer-events: auto;
+}
+
 /* General Styling */
 body {
   font-family: "Roboto", sans-serif;
@@ -294,5 +311,4 @@ a:hover {
   background-color: #007bff;
 }
 
- /* Create your profile */
 
