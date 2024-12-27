@@ -194,6 +194,26 @@ h3.text-center.mb-4 {
   margin: 0 auto;
 }
 
+/* Profile Catalog */
+
+.nav-tabs .nav-link {
+  font-size: 13px; /* Adjust font size as needed */
+  color: #333; /* Adjust color as needed */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid transparent; /* Add transparent bottom border */
+  transition: border-color 0.3s ease; /* Add smooth transition for border color */
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: bold;
+  color: #007bff; /* Adjust color as needed */
+  border-bottom-color: #007bff; /* Add bottom border to active tab */
+}
+
+.nav-tabs .nav-link:hover {
+  border-bottom-color: #007bff; /* Add bottom border on hover */
+}
+
 /* Media Query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
   .hero-section h1 {
