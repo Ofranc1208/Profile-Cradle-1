@@ -1,47 +1,12 @@
 /* General Styling */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-body {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
-/* Existing CSS */
-
-.navbar-nav .nav-link.active {
-  font-weight: bold; /* Make the active link bold */
-  color: #ffc107; /* Adjust color as desired */
-  border-bottom: 2px solid #ffc107; /* Add an underline */
-}
-
-/* Keyframes for fade-in animation */
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Apply fade-in animation to hero section headings */
-.hero-section .animate__fadeInUp {
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-}
-
-/* Style for wrapped elements (if needed) */
-.wrapped {
-  background-color: yellow;
-  /* Highlight wrapped elements */
-  /* Add other styles as needed */
+  background-color: #fff;
+  color: #6d6868;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Typography */
@@ -51,7 +16,12 @@ h3 {
   font-weight: 700;
 }
 
-/* Navbar */
+h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+/* Navigation */
 .navbar {
   background-color: #333;
   padding: 16px 0;
@@ -70,61 +40,71 @@ h3 {
   color: #007bff;
 }
 
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #ffc107;
+}
+
 /* Hero Section */
 .hero-section {
   background-color: #e9ecef;
   color: #333;
   padding: 64px 16px;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+  /* Removed redundant text-align */
 }
 
 .hero-section h1 {
-  font-size: 38px;
+  font-size: 40px;
   margin-bottom: 24px;
-  font-weight: 700;
-  text-align: left;
 }
 
 .hero-section p {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 32px;
 }
 
-/* Style for card headings */
-h3.text-center.mb-4 {
-  font-size: 16px; /* Updated font size */
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
-}
-
-/* Style for hero section buttons */
 .hero-section .btn-lg {
   background-color: #1560eb;
   border: none;
   color: #fff;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  padding: 11.6px 20px;
-  font-size: 15.2px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 10px;
 }
 
 .hero-section .btn-lg:hover {
   background-color: #003d80;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+}
+
+/* Animation for hero section elements */
+.hero-move {
+  animation: gentleMove 1s ease-in-out forwards;
+}
+
+@keyframes gentleMove {
+  0% {
+      transform: translateY(0);
+  }
+
+  100% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Other Sections */
+.py-5 {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
 }
 
 /* Carousel Section */
 .carousel-section {
   margin-top: -10px;
-  /* Reduced top margin */
   margin-bottom: -50px;
-  /* Reduced bottom margin */
 }
 
 .carousel-item .card {
@@ -156,7 +136,7 @@ h3.text-center.mb-4 {
 }
 
 .carousel-item .card-text {
-  font-size: 15px; /* Updated font size */
+  font-size: 15px;
   line-height: 1.5;
   color: #555;
 }
@@ -174,88 +154,42 @@ h3.text-center.mb-4 {
   color: #333;
   border: 1px solid #ddd;
   border-radius: 5px;
-  text-align: center; /* Updated text alignment */
-  margin-top: -10px;
-  /* Changed to pixels */
-  margin-bottom: 10px;
-  /* Add consistent bottom margin */
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 .section-4 h1 {
-  font-size: 15px; /* Updated font size */
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-/* Ensure images are responsive */
 .section-4 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-/* Profile Catalog */
-
-.nav-tabs .nav-link {
-  font-size: 13px; /* Adjust font size as needed */
-  color: #333; /* Adjust color as needed */
-  border: none; /* Remove default border */
-  border-bottom: 2px solid transparent; /* Add transparent bottom border */
-  transition: border-color 0.3s ease; /* Add smooth transition for border color */
-}
-
-.nav-tabs .nav-link.active {
-  font-weight: bold;
-  color: #007bff; /* Adjust color as needed */
-  border-bottom-color: #007bff; /* Add bottom border to active tab */
-}
-
-.nav-tabs .nav-link:hover {
-  border-bottom-color: #007bff; /* Add bottom border on hover */
+  margin-top: -20px;
 }
 
 /* Media Query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
-  .hero-section h1 {
-      font-size: 30px;
-      /* Adjust font size for smaller screens */
+
+  .hero-section h1,
+  .section-4 h1 {
+      font-size: 24px;
   }
 
   .hero-section p {
       font-size: 16px;
-      /* Adjust font size for smaller screens */
   }
-
-  .section-4 h1 {
-      font-size: 20px;
-      /* Adjust font size for smaller screens */
-  }
-
-  /* Add more styles here to adjust the layout for smaller screens */
-  /* For example, you might want to change the number of columns, 
-     adjust margins and padding, or stack elements vertically. */
 }
 
-/* Media Query for larger screens (e.g., desktop) */
-@media (min-width: 769px) {
-  /* Add styles here to adjust the layout for larger screens */
-  /* For example, you might want to increase font sizes, 
-     adjust column widths, or add more spacing between elements. */
-}
-
-/* Animation for hero section elements */
-.hero-section .container .hero-move {
-  /* More specific selector */
-  animation: gentleMove 1s ease-in-out forwards;
-  /* Added 'forwards' */
-}
-
-@keyframes gentleMove {
-  0% {
-      transform: translateY(0);
-  }
-
-  100% {
-      transform: translateY(-10px);
-  }
+/* Style for card headings */
+h3.text-center.mb-4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
 }
